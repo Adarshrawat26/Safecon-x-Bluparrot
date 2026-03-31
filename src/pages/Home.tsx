@@ -1,31 +1,30 @@
 import { motion } from 'framer-motion';
-import { AnimatedSection } from '../components/ui/AnimatedSection';
 import {
-  SectionLabel,
-  Section,
-} from '../components/ui/DesignSystem';
-import { capabilities } from '../data/services';
-import { hero } from '../data/content';
-import { siteImagery } from '../data/siteImagery';
-import heroBg from '../assets/hero-drone.png';
-import { HeroBackgroundVideo } from '../components/shared/HeroBackgroundVideo';
-import internationalGlobe from '../assets/international-operations-globe.png';
-import {
-  FileDown,
-  CircuitBoard,
-  BrainCircuit,
-  ClipboardList,
-  Waypoints,
-  Earth,
-  BadgeCheck,
-  Cable,
   ArrowRight,
-  FlaskConical,
-  Container,
-  Trophy,
+  BadgeCheck,
+  BrainCircuit,
+  Cable,
   ChevronRight,
+  CircuitBoard,
+  ClipboardList,
+  Container,
+  Earth,
+  FileDown,
+  FlaskConical,
+  Trophy,
+  Waypoints,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import heroMilitary from '../assets/images/hero-military.jpg';
+import internationalGlobe from '../assets/international-operations-globe.png';
+import { AnimatedSection } from '../components/ui/AnimatedSection';
+import {
+  Section,
+  SectionLabel,
+} from '../components/ui/DesignSystem';
+import { hero } from '../data/content';
+import { capabilities } from '../data/services';
+import { siteImagery } from '../data/siteImagery';
 
 const iconMap: Record<string, any> = {
   'circuit-board': CircuitBoard,
@@ -49,11 +48,10 @@ export const Home = () => {
       {/* Hero — grid layout, controlled scrim, single dominant CTA */}
       <section className="relative min-h-screen flex flex-col overflow-hidden pt-[72px]">
         <div className="absolute inset-0 z-0">
-          <HeroBackgroundVideo
-            videoSrc="/videos/hero-drone.mp4"
-            posterSrc={heroBg}
-            imageFallbackSrc={heroBg}
-            mediaClassName={HERO_BG_MEDIA_CLASS}
+          <img
+            src={heroMilitary}
+            alt="Military Hero Background"
+            className={HERO_BG_MEDIA_CLASS + ' w-full h-full'}
           />
           <div
             className="absolute inset-0 z-[1]"
