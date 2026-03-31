@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+    @apply font-sans;
+  }
+
+  body {
+    @apply bg-background text-on-background antialiased font-sans;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans text-on-background;
+  }
+
+  p {
+    @apply text-on-surface-variant;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-on-primary-container bg-clip-text text-transparent;
+  }
+
+  .tonal-shift {
+    transition: background-color 0.3s ease;
+  }
+
+  .glass-panel {
+    background: rgba(61, 68, 80, 0.55);
+    backdrop-filter: blur(24px);
+  }
+}
+
+:root {
+  color-scheme: dark;
+  --radius: 16px;
+  --radius-sm: 12px;
+  --text-primary: #ffffff;
+  --text-secondary: #cfcfcf;
+  --bg-glass: rgba(255, 255, 255, 0.05);
+  --accent-soft: #a8c7ff;
+  --link-hover: #a8c7ff;
+}
+
+/* Premium button / control micro-interaction */
+@layer utilities {
+  .ds-interactive {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      background-color 0.25s ease,
+      border-color 0.25s ease,
+      color 0.25s ease,
+      opacity 0.25s ease;
+  }
+  .ds-interactive:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  .ds-interactive:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+
+/* Lenis Smooth Scroll */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Selection */
+::selection {
+  @apply bg-primary text-on-primary;
+}
