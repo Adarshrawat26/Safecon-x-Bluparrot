@@ -24,7 +24,7 @@ This folder structure is ready for your images. Place them in the appropriate su
 1. **Format**: WebP or JPEG (WebP preferred for 80% smaller size)
 2. **Compression**: Use TinyPNG or Squoosh before adding
 3. **Naming**: Use lowercase with hyphens (e.g., `hero-image.jpg`)
-4. **Size**: 
+4. **Size**:
    - Hero images: 1920x1080px or larger
    - Profile photos: 800x800px minimum
    - Section images: 1200x800px recommended
@@ -34,14 +34,13 @@ This folder structure is ready for your images. Place them in the appropriate su
 
 Bundled JPEGs under `sections/` are **stock imagery** (sourced from [Unsplash](https://unsplash.com)) used for manufacturing / defence **mood only**. They are **not** customer sites or classified programmes.
 
-| File | Typical use on site |
-|------|---------------------|
-| `engineering-production.jpg` | About hero, Israel Desk hero (with scrim) |
-| `factory-floor.jpg` | Contact hero, Atmanirbhar hero, About “manufacturing” band |
-| `defence-aviation.jpg` | Leadership hero |
-| `precision-manufacturing.jpg` | Services hero, Home Indo-Israel panel |
-| `naval-maritime-industrial.jpg` | Israel Desk — full-width band below hero |
-| `industrial-rd-lab.jpg` | Atmanirbhar Bharat — full-width band below hero |
+| File                            | Typical use on site                                        |
+| ------------------------------- | ---------------------------------------------------------- |
+| `engineering-production.jpg`    | About hero, Israel Desk hero (with scrim)                  |
+| `factory-floor.jpg`             | Contact hero, Atmanirbhar hero, About “manufacturing” band |
+| `defence-aviation.jpg`          | Leadership hero                                            |
+| `naval-maritime-industrial.jpg` | Israel Desk — full-width band below hero                   |
+| `industrial-rd-lab.jpg`         | Atmanirbhar Bharat — full-width band below hero            |
 
 Replace these with **your own cleared marketing photos** for production if required. Keep filenames or update imports in `src/data/siteImagery.ts`.
 

@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { staggerContainer, staggerItem } from '../../lib/motionVariants';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { SafeconLogo } from '../brand/SafeconLogo';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { staggerContainer, staggerItem } from '../../lib/motionVariants';
 import { BluParrotLogo } from '../brand/BluParrotLogo';
+import { SafeconLogo } from '../brand/SafeconLogo';
 
 const MotionLink = motion(Link);
 
@@ -12,8 +12,8 @@ const navLinks = [
   { path: '/about', label: 'About Us' },
   { path: '/services', label: 'Capabilities' },
   { path: '/leadership', label: 'Leadership' },
-  { path: '/israel-desk', label: 'Partnerships' },
-  { path: '/atmanirbhar-bharat', label: 'Atmanirbhar' },
+  { path: '/israel-desk', label: 'Israel Desk' },
+  { path: '/atmanirbhar-bharat', label: 'Atmanirbhar Bharat' },
 ];
 
 export const Navbar = () => {
@@ -49,7 +49,7 @@ export const Navbar = () => {
       <div className="h-[72px] flex justify-between items-center px-6 sm:px-10 lg:px-12 max-w-none mx-auto">
         <MotionLink
           to="/"
-          className="flex h-11 items-center rounded-[var(--radius-sm)] bg-white px-3 py-1.5 shadow-sm ring-1 ring-black/5 shrink-0 min-w-0 max-w-[min(100%,560px)]"
+          className="flex h-11 items-center rounded-[var(--radius-sm)] px-3 py-1.5 shrink-0 min-w-0 max-w-[min(100%,560px)]"
           aria-label="Safecon Blu Parrot — Home"
           whileHover={reduceMotion ? undefined : { scale: 1.005 }}
           whileTap={reduceMotion ? undefined : { scale: 0.995 }}
@@ -57,7 +57,7 @@ export const Navbar = () => {
         >
           <span className="flex items-center gap-2.5 sm:gap-4">
             <SafeconLogo className="h-7 sm:h-8 w-auto max-w-[100px] sm:max-w-[140px] shrink-0" />
-            <span className="h-7 sm:h-8 w-px bg-neutral-200 shrink-0" aria-hidden />
+            <span className="h-7 sm:h-8 w-px bg-white/20 shrink-0" aria-hidden />
             <BluParrotLogo className="max-h-7 sm:max-h-8 w-auto max-w-[min(48vw,260px)] sm:max-w-[300px] shrink-0" />
           </span>
         </MotionLink>

@@ -1,38 +1,38 @@
 import { motion } from 'framer-motion';
-import { AnimatedSection } from '../components/ui/AnimatedSection';
-import { Stagger, StaggerItem } from '../components/ui/Stagger';
-import { Link } from 'react-router-dom';
 import {
-  PageHero,
-  Section,
-  SectionLabel,
-  GlassPanel,
-  TonalCard,
-  BulletItem,
-  TechTag,
-  ProgressBar,
-  FeatureRow,
-  CtaBanner,
-  DSButton,
-} from '../components/ui/DesignSystem';
-import {
-  CircuitBoard,
-  BrainCircuit,
-  Kanban,
-  Antenna,
-  Sparkles,
-  Target,
-  MessageSquarePlus,
-  MapPinned,
-  Wifi,
-  ScanEye,
-  FileDown,
-  BadgeCheck,
-  Anchor,
-  Mountain,
-  Radar,
+    Anchor,
+    Antenna,
+    BadgeCheck,
+    BrainCircuit,
+    CircuitBoard,
+    FileDown,
+    Kanban,
+    MapPinned,
+    MessageSquarePlus,
+    Mountain,
+    Radar,
+    ScanEye,
+    Sparkles,
+    Target,
+    Wifi,
 } from 'lucide-react';
-import { keyPrograms, projectExperience, whitepapers, certifications } from '../data/services';
+import { Link } from 'react-router-dom';
+import { AnimatedSection } from '../components/ui/AnimatedSection';
+import {
+    BulletItem,
+    CtaBanner,
+    DSButton,
+    FeatureRow,
+    GlassPanel,
+    PageHero,
+    ProgressBar,
+    Section,
+    SectionLabel,
+    TechTag,
+    TonalCard,
+} from '../components/ui/DesignSystem';
+import { Stagger, StaggerItem } from '../components/ui/Stagger';
+import { certifications, keyPrograms, projectExperience, whitepapers } from '../data/services';
 import { siteImagery } from '../data/siteImagery';
 
 export const Services = () => {
@@ -48,8 +48,8 @@ export const Services = () => {
         }
         description="We keep engineering, integration, and supply-chain under one roof where programmes need it—so accountability stays clear and delivery does not fragment."
         height="tall"
-        imageSrc={siteImagery.precisionManufacturing.src}
-        imageAlt={siteImagery.precisionManufacturing.alt}
+        imageSrc={siteImagery.heavyIndustrialProduction.src}
+        imageAlt={siteImagery.heavyIndustrialProduction.alt}
         imagePosition="object-[center_40%]"
       />
 

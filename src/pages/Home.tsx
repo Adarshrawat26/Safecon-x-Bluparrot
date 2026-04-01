@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import {
   ArrowRight,
   BadgeCheck,
+  BookOpen,
   BrainCircuit,
   Cable,
   ChevronRight,
@@ -11,8 +12,10 @@ import {
   Earth,
   FileDown,
   FlaskConical,
+  HardHat,
   Trophy,
   Waypoints,
+  type LucideIcon,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroMilitary from '../assets/images/hero-military.jpg';
@@ -22,20 +25,21 @@ import {
   Section,
   SectionLabel,
 } from '../components/ui/DesignSystem';
-import { hero } from '../data/content';
 import { capabilities } from '../data/services';
 import { siteImagery } from '../data/siteImagery';
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   'circuit-board': CircuitBoard,
   'brain-circuit': BrainCircuit,
   'clipboard-list': ClipboardList,
   waypoints: Waypoints,
+  'hard-hat': HardHat,
+  'book-open': BookOpen,
 };
 
 const heroSlashList = [
-  '/ MANUFACTURING & SYSTEMS INTEGRATION',
   '/ AI FOR DEFENCE & INTELLIGENCE',
+  '/ MANUFACTURING & SYSTEMS INTEGRATION',
   '/ PROGRAM EXECUTION & SUPPLY CHAIN',
 ];
 
@@ -76,14 +80,7 @@ export const Home = () => {
                 <li key={line}>{line}</li>
               ))}
             </motion.ul>
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-sm md:text-base text-text-secondary font-light leading-relaxed max-w-[20rem] md:max-w-xs md:text-right"
-            >
-              We pair factory and integration depth with serious data and AI work—so programmes ship on spec, on schedule, and stay supportable in the field.
-            </motion.p>
+      
           </div>
 
           {/* Main hero: headline + integrated info card */}
@@ -96,16 +93,20 @@ export const Home = () => {
             >
               <div className="inline-flex items-center px-3 py-1.5 rounded-[var(--radius-sm)] bg-white/[0.08] backdrop-blur-md border border-white/10 mb-6 md:mb-8">
                 <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.25em] text-text-secondary uppercase">
-                  25+ years · defence & aerospace · India and overseas programmes
+                  25+ years · AI · engineering · execution
                 </span>
               </div>
-              <h1 className="font-headline font-bold text-white text-[clamp(2.25rem,5vw+0.5rem,4rem)] leading-[1.05] tracking-[-0.0625rem]">
-                Integrated.
+              <h1 className="font-headline font-bold text-white text-[clamp(1.25rem,4vw+0.3rem,2.5rem)] leading-[1.05] tracking-[-0.0625rem]">
+              Integrated Defence Capabilities Powered by AI, Engineering & Execution
+
                 <br />
-                Engineered.
-                <br />
-                <span className="text-accent-soft">Field-Proven.</span>
+            
               </h1>
+              <p className="mt-6 max-w-3xl text-sm md:text-base text-text-secondary leading-relaxed font-light">
+               Safecon Blu Parrot is a group of companies working over 25 years delivering advanced capabilities across Manufacturing in S&T, AI, integration, and project management for aerospace & defence industries.
+From Integration , Manufacturing, SCA 2.2.2 programs to AI-driven intelligence systems, we combine deep engineering with next-generation analytics to build mission-ready solutions, Project Management, Missiles Explosives.
+
+              </p>
               <div className="flex flex-wrap gap-3 mt-8 md:mt-10">
                 <Link to="/services">
                   <motion.button
@@ -144,13 +145,17 @@ export const Home = () => {
                     <span className="font-headline font-bold text-white text-[10px] tracking-tight">SBP</span>
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="font-headline font-bold text-white text-sm">Strategic programmes desk</p>
+                    <p className="font-headline font-bold text-white text-sm">Integrated Defence Capabilities</p>
                     <p className="text-[10px] font-sans tracking-[0.2em] text-text-secondary/80 uppercase mt-1">
                       Safecon Blu Parrot
                     </p>
                   </div>
                 </div>
-                <p className="text-xs text-text-secondary mt-4 leading-[1.6]">{hero.subtitle}</p>
+                <p className="text-xs text-text-secondary mt-4 leading-[1.6]">
+                  Safecon Blu Parrot is a group of companies working over 25 years delivering advanced capabilities
+                  across manufacturing in S&amp;T, AI, integration, and project management for aerospace &amp; defence
+                  industries.
+                </p>
                 <Link
                   to="/contact"
                   className="mt-5 flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-[var(--radius-sm)] bg-white/10 border border-white/15 text-white font-headline font-semibold text-xs uppercase tracking-widest hover:bg-white/[0.14] hover:border-white/25 transition-all duration-200"
@@ -163,6 +168,47 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
+
+      {/* Core Pillars */}
+      <Section bg="bg-background">
+        <div className="grid grid-cols-1 gap-10">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6">
+            <h2 className="text-4xl font-headline font-bold tracking-tight text-on-background leading-[1.2]">
+              Core <span className="text-primary italic">Pillars</span>
+            </h2>
+            <p className="text-[#9aa3aa] text-sm leading-relaxed max-w-[420px] sm:text-right sm:ml-auto shrink-0">
+              Where we spend most of our time: build, integrate, deploy, and keep systems running.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {capabilities.map((cap, i) => {
+              const Icon = iconMap[cap.icon] || CircuitBoard;
+              return (
+                <motion.div
+                  key={cap.id}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ duration: 0.45, delay: i * 0.06 }}
+                  whileHover={{ y: -6, transition: { duration: 0.25, ease: 'easeOut' } }}
+                  className="rounded-[16px] border border-white/[0.06] bg-white/[0.04] p-[28px] flex flex-col h-full transition-[background-color] duration-300 ease-out hover:bg-white/[0.06]"
+                >
+                  <Icon
+                    className={`w-6 h-6 shrink-0 mb-4 ${i % 2 === 0 ? 'text-primary' : 'text-[#22c7a8]'}`}
+                    size={24}
+                    strokeWidth={1.5}
+                    aria-hidden
+                  />
+                  <h3 className="text-xl font-headline font-bold mb-3 text-on-background leading-snug">{cap.title}</h3>
+                  <p className="text-sm text-[#9aa3aa] leading-relaxed flex-1">{cap.description}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </Section>
 
       {/* Strategic Overview — synergy band: tight headline, readable measure, aligned stat grid */}
       <Section
@@ -242,46 +288,6 @@ export const Home = () => {
         </div>
 
         <div className="relative mt-20 h-px w-full max-w-full bg-white/[0.05]" aria-hidden />
-      </Section>
-
-      {/* Core Pillars */}
-      <Section bg="bg-background">
-        <div className="grid grid-cols-1 gap-10">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6">
-            <h2 className="text-4xl font-headline font-bold tracking-tight text-on-background leading-[1.2]">
-              Core <span className="text-primary italic">Pillars</span>
-            </h2>
-            <p className="text-[#9aa3aa] text-sm leading-relaxed max-w-[420px] sm:text-right sm:ml-auto shrink-0">
-              Where we spend most of our time: build, integrate, deploy, and keep systems running.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {capabilities.slice(0, 4).map((cap, i) => {
-              const Icon = iconMap[cap.icon] || CircuitBoard;
-              return (
-                <motion.div
-                  key={cap.id}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-40px' }}
-                  transition={{ duration: 0.45, delay: i * 0.06 }}
-                  whileHover={{ y: -6, transition: { duration: 0.25, ease: 'easeOut' } }}
-                  className="rounded-[16px] border border-white/[0.06] bg-white/[0.04] p-[28px] flex flex-col h-full transition-[background-color] duration-300 ease-out hover:bg-white/[0.06]"
-                >
-                  <Icon
-                    className={`w-6 h-6 shrink-0 mb-4 ${i % 2 === 0 ? 'text-primary' : 'text-[#22c7a8]'}`}
-                    size={24}
-                    strokeWidth={1.5}
-                    aria-hidden
-                  />
-                  <h3 className="text-xl font-headline font-bold mb-3 text-on-background leading-snug">{cap.title}</h3>
-                  <p className="text-sm text-[#9aa3aa] leading-relaxed flex-1">{cap.description}</p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
       </Section>
 
       {/* Global Presence */}
@@ -365,8 +371,8 @@ export const Home = () => {
               <div className="aspect-video rounded-[20px] overflow-hidden ring-1 ring-white/[0.08] shadow-[0_24px_48px_-28px_rgba(0,0,0,0.45)] transition-shadow duration-300 hover:shadow-[0_28px_56px_-24px_rgba(0,0,0,0.5)]">
                 <div className="relative w-full h-full min-h-[200px]">
                   <img
-                    src={siteImagery.precisionManufacturing.src}
-                    alt={siteImagery.precisionManufacturing.alt}
+                    src={siteImagery.heavyIndustrialProduction.src}
+                    alt={siteImagery.heavyIndustrialProduction.alt}
                     className="absolute inset-0 w-full h-full object-cover object-[center_45%]"
                     loading="lazy"
                   />

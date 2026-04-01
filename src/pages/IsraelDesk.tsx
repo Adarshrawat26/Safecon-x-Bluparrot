@@ -1,27 +1,27 @@
 import { motion } from 'framer-motion';
-import { AnimatedSection } from '../components/ui/AnimatedSection';
-import { Link } from 'react-router-dom';
 import {
-  PageHero,
-  SectionLabel,
-  GlassPanel,
-  DSButton,
-  CtaBanner,
-} from '../components/ui/DesignSystem';
-import {
-  Handshake,
-  Container,
-  Landmark,
-  Kanban,
-  Zap,
-  BadgeCheck,
-  ArrowRight,
-  Satellite,
-  BrainCircuit,
-  Antenna,
-  Ship,
-  Cpu,
+    Antenna,
+    ArrowRight,
+    BadgeCheck,
+    BrainCircuit,
+    Container,
+    Cpu,
+    Handshake,
+    Kanban,
+    Landmark,
+    Satellite,
+    Ship,
+    Zap,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { AnimatedSection } from '../components/ui/AnimatedSection';
+import {
+    CtaBanner,
+    DSButton,
+    GlassPanel,
+    PageHero,
+    SectionLabel,
+} from '../components/ui/DesignSystem';
 import { siteImagery } from '../data/siteImagery';
 
 const focusAreas = [
@@ -62,15 +62,9 @@ export const IsraelDesk = () => {
         className="relative overflow-hidden border-y border-white/[0.06]"
         aria-labelledby="israel-desk-industrial-band-heading"
       >
-        <div className="relative min-h-[280px] md:min-h-[380px]">
-          <img
-            src={siteImagery.navalMaritimeIndustrial.src}
-            alt={siteImagery.navalMaritimeIndustrial.alt}
-            className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/65 to-black/45" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        <div className="relative min-h-[280px] md:min-h-[380px] bg-gradient-to-r from-surface-container-lowest via-surface-container-low to-surface-container">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
           <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-12 py-14 md:py-20 flex flex-col justify-center min-h-[280px] md:min-h-[380px]">
             <p className="text-tertiary text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase mb-4">
               Maritime & defence supply

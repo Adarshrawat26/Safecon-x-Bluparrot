@@ -1,24 +1,24 @@
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import {
+    ArrowRight,
+    BadgeCheck,
+    Earth,
+    Sparkles,
+    Target,
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { BluParrotLogo } from '../components/brand/BluParrotLogo';
+import { SafeconLogo } from '../components/brand/SafeconLogo';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
 import {
-  PageHero,
-  Section,
-  SectionLabel,
-  DSButton,
-  BulletItem,
+    BulletItem,
+    DSButton,
+    PageHero,
+    Section,
+    SectionLabel,
 } from '../components/ui/DesignSystem';
-import { aboutUs, whyUs, hero, stats, indigenisation, globalSupplyChain } from '../data/content';
+import { aboutUs, globalSupplyChain, hero, indigenisation, stats, whyUs } from '../data/content';
 import { siteImagery } from '../data/siteImagery';
-import { SafeconLogo } from '../components/brand/SafeconLogo';
-import { BluParrotLogo } from '../components/brand/BluParrotLogo';
-import {
-  BadgeCheck,
-  Earth,
-  Target,
-  Sparkles,
-  ArrowRight,
-} from 'lucide-react';
 
 const timeline = [
   { year: '1999', title: 'Safecon Founded', description: 'Defence manufacturing and indigenisation focus.' },
@@ -139,18 +139,7 @@ export const AboutUs = () => {
       {/* Manufacturing */}
       <Section bg="bg-surface-container-low">
         {flowHint('03 — How we work')}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[60px] items-center">
-          <AnimatedSection>
-            <div className="relative rounded-[20px] overflow-hidden ring-1 ring-white/[0.08] shadow-[0_20px_40px_-24px_rgba(0,0,0,0.45)] transition-shadow duration-300 hover:shadow-[0_24px_48px_-20px_rgba(0,0,0,0.4)]">
-              <img
-                src={siteImagery.factoryFloor.src}
-                alt={siteImagery.factoryFloor.alt}
-                className="w-full aspect-[4/3] sm:aspect-[5/4] object-cover object-center brightness-[0.88]"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/15 pointer-events-none" />
-            </div>
-          </AnimatedSection>
+        <div className="grid grid-cols-1 gap-12 items-center">
           <AnimatedSection delay={0.12}>
             <div className="max-w-[480px]">
               <SectionLabel label="Execution" className="mb-4" />
