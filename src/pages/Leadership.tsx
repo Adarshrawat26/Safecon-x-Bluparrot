@@ -1,19 +1,21 @@
 import { motion } from 'framer-motion';
-import { AnimatedSection } from '../components/ui/AnimatedSection';
+import { ArrowRight, BookOpen, BrainCircuit, CircuitBoard, Cog, Radar, Satellite, Workflow } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { AnimatedSection } from '../components/ui/AnimatedSection';
 import {
-  PageHero,
-  Section,
-  ValueItem,
-  Chip,
-  CtaBanner,
-  DSButton,
+    Chip,
+    CtaBanner,
+    DSButton,
+    PageHero,
+    Section,
+    ValueItem,
 } from '../components/ui/DesignSystem';
-import { CircuitBoard, ArrowRight, Satellite, Cog, BookOpen, BrainCircuit, Radar, Workflow } from 'lucide-react';
 import { leadership, leadershipThought } from '../data/leadership';
 import { siteImagery } from '../data/siteImagery';
 
 export const Leadership = () => {
+  const leadershipImageByName = Object.fromEntries(leadership.map((member) => [member.name, member.imagePath]));
+
   return (
     <div className="w-full">
       {/* Hero */}
@@ -97,20 +99,31 @@ export const Leadership = () => {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           {[
             { name: 'Nitin Kalra', initials: 'NK', title: 'Co-Founder & Technology Strategist', icon: <Satellite size={18} />, focus: 'AI & data platforms, satellite image analytics, and autonomous decision support for modern warfare.', tag: 'Strategic Focus: AI Integration', gradient: 'from-primary-container via-surface-container to-surface-container-lowest' },
             { name: 'Aditya Arora', initials: 'AA', title: 'Co-Founder & Chief Systems Engineer', icon: <Cog size={18} />, focus: 'Defence engineering, naval systems integration, and modular architectures for operational readiness.', tag: 'Strategic Focus: System Readiness', gradient: 'from-surface-container via-surface-container-high to-primary-container' },
-          ].map((leader, i) => (
+          ].map((leader, i) => {
+            const leaderImage = leadershipImageByName[leader.name];
+            return (
             <AnimatedSection key={leader.name} delay={i * 0.2}>
               <motion.div
                 whileHover={{ y: -4 }}
                 className="group relative bg-surface-container rounded-[16px] overflow-hidden border border-white/[0.06] transition-all duration-300 shadow-xl hover:shadow-2xl hover:bg-white/[0.04]"
               >
-                <div className="aspect-[4/5] w-full overflow-hidden">
-                  <div className={`w-full h-full bg-gradient-to-br ${leader.gradient} flex items-center justify-center`}>
-                    <div className="text-[120px] font-headline font-bold text-on-surface/5">{leader.initials}</div>
-                  </div>
+                <div className="aspect-[4/4.35] w-full overflow-hidden">
+                  {leaderImage ? (
+                    <img
+                      src={leaderImage}
+                      alt={leader.name}
+                      className={`w-full h-full ${leader.name === 'Nitin Kalra' ? 'object-contain object-[center_42%] bg-[#ececec]' : 'object-cover object-center'}`}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className={`w-full h-full bg-gradient-to-br ${leader.gradient} flex items-center justify-center`}>
+                      <div className="text-[120px] font-headline font-bold text-on-surface/5">{leader.initials}</div>
+                    </div>
+                  )}
                 </div>
                 <div className="absolute bottom-0 left-0 w-full p-8" style={{ background: 'rgba(61, 68, 80, 0.45)', backdropFilter: 'blur(24px)' }}>
                   <div className="font-headline text-3xl font-bold mb-1 text-on-background">{leader.name}</div>
@@ -128,7 +141,7 @@ export const Leadership = () => {
                 </div>
               </motion.div>
             </AnimatedSection>
-          ))}
+          );})}
         </div>
       </Section>
 

@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import type { ReactNode } from 'react';
 
 interface PageHeroProps {
   badge?: string;
@@ -360,10 +360,10 @@ interface SectionProps {
 }
 
 /** Site container: 1200px max, 48px horizontal padding, 100px vertical rhythm (override with className when needed). */
-export const Section = ({ children, bg = 'bg-surface', className = '', wide: _wide = false }: SectionProps) => (
+export const Section = ({ children, bg = 'bg-surface', className = '', wide = false }: SectionProps) => (
   <section
     className={`px-6 md:px-12 py-24 md:py-[100px] ${bg} ${className}`}
   >
-    <div className="mx-auto w-full max-w-[1200px]">{children}</div>
+    <div className={`mx-auto w-full ${wide ? 'max-w-[1400px]' : 'max-w-[1200px]'}`}>{children}</div>
   </section>
 );

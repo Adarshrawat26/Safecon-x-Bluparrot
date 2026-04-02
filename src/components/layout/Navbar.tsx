@@ -31,10 +31,6 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [location]);
-
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -49,6 +45,7 @@ export const Navbar = () => {
       <div className="h-[72px] flex justify-between items-center px-6 sm:px-10 lg:px-12 max-w-none mx-auto">
         <MotionLink
           to="/"
+          onClick={() => setMobileMenuOpen(false)}
           className="flex h-11 items-center rounded-[var(--radius-sm)] px-3 py-1.5 shrink-0 min-w-0 max-w-[min(100%,560px)]"
           aria-label="Safecon Blu Parrot — Home"
           whileHover={reduceMotion ? undefined : { scale: 1.005 }}
@@ -93,7 +90,7 @@ export const Navbar = () => {
         </MotionLink>
 
         <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={() => setMobileMenuOpen((open) => !open)}
           className="md:hidden p-2 text-white/90 hover:text-accent-soft transition-colors"
           aria-label="Toggle menu"
         >
@@ -120,6 +117,7 @@ export const Navbar = () => {
                 <motion.div key={link.path} variants={staggerItem}>
                   <Link
                     to={link.path}
+                    onClick={() => setMobileMenuOpen(false)}
                     className={`block py-2.5 text-sm font-semibold tracking-[0.5px] transition-colors ${
                       location.pathname === link.path ? 'text-accent-soft' : 'text-white/85 hover:text-accent-soft'
                     }`}
@@ -129,7 +127,7 @@ export const Navbar = () => {
                 </motion.div>
               ))}
               <motion.div variants={staggerItem} className="pt-2">
-                <Link to="/contact" className="block">
+                <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block">
                   <motion.button
                     type="button"
                     className="ds-interactive w-full bg-primary text-on-primary-fixed px-[18px] py-2.5 rounded-full text-sm font-medium mt-2"

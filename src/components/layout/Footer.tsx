@@ -1,19 +1,26 @@
-import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
-import { Mail, ArrowUpRight } from 'lucide-react';
-import { SafeconLogo } from '../brand/SafeconLogo';
-import { BluParrotLogo } from '../brand/BluParrotLogo';
+import { ArrowUpRight, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { contact } from '../../data/content';
+import { BluParrotLogo } from '../brand/BluParrotLogo';
+import { SafeconLogo } from '../brand/SafeconLogo';
 
 const footerNav = {
   company: [
     { to: '/about', label: 'About Us' },
     { to: '/services', label: 'Capabilities' },
     { to: '/leadership', label: 'Leadership' },
+    { to: '/israel-desk', label: 'Israel Desk' },
+    { to: '/atmanirbhar-bharat', label: 'Atmanirbhar Bharat' },
+    { to: '/contact', label: 'Contact Us' },
   ],
   programmes: [
-    { to: '/israel-desk', label: 'Partnerships' },
+    { to: '/about', label: 'About Us' },
+    { to: '/services', label: 'Capabilities' },
+    { to: '/leadership', label: 'Leadership' },
+    { to: '/israel-desk', label: 'Israel Desk' },
     { to: '/atmanirbhar-bharat', label: 'Atmanirbhar Bharat' },
+    { to: '/contact', label: 'Contact Us' },
   ],
   legal: [
     { to: '/contact', label: 'Privacy' },

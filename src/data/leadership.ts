@@ -15,7 +15,7 @@ export const leadership: LeadershipProfile[] = [
     name: 'Nitin Kalra',
     title: 'Co-Founder',
     role: 'Technology Strategist & Defence Innovation Enabler',
-    imagePath: '/src/assets/images/leadership/nitin-kalra.jpg',
+    imagePath: '/src/assets/images/leadership/nitin-kalra.png',
     bio: [
       'Nitin Kalra is a technology strategist and defence innovation enabler, leading Safecon Blu Parrot\'s vision of integrating Artificial Intelligence with real-world defence execution.',
       'With a strong track record of building global AI and data-driven platforms, Nitin has positioned Blu Parrot at the forefront of AI-powered defence systems.'
@@ -38,7 +38,7 @@ export const leadership: LeadershipProfile[] = [
     name: 'Aditya Arora',
     title: 'Co-Founder',
     role: 'Defence Engineering & Systems Integration Lead',
-    imagePath: '/src/assets/images/leadership/aditya-arora.jpg',
+    imagePath: '/src/assets/images/leadership/aditya-arora.png',
     bio: [
       'Aditya Arora leads the defence engineering and systems integration vertical, bringing deep expertise in mission-critical programs, naval systems, and complex defence deployments.',
       'He has successfully driven execution across strategic defence programs with precision engineering and battlefield-ready reliability.'

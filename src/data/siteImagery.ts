@@ -1,29 +1,28 @@
-import defenceAviation from '../assets/images/sections/defence-aviation.jpg';
-import engineeringProduction from '../assets/images/sections/engineering-production.jpg';
-import factoryFloor from '../assets/images/sections/factory-floor.jpg';
-import heavyIndustrialProduction from '../assets/images/sections/heavy-industrial-production.jpg';
-import industrialRdLab from '../assets/images/sections/industrial-rd-lab.jpg';
+import armyFactory1 from '../assets/images/sections/army-factory-1.png';
+import defenceFactory2 from '../assets/images/sections/defence-factory-2.png';
+import heavyFactory4 from '../assets/images/sections/heavy-factory-4.png';
+import roboticsFactory3 from '../assets/images/sections/robotics-factory-3.png';
 
 /** Licensed stock (Unsplash) — swap for your own programme photography when cleared for web use. */
 export const siteImagery = {
   engineeringProduction: {
-    src: engineeringProduction,
-    alt: 'Engineers and technicians working with industrial production equipment.',
+    src: armyFactory1,
+    alt: 'Armoured vehicle assembly inside a defence manufacturing facility.',
   },
   factoryFloor: {
-    src: factoryFloor,
-    alt: 'Manufacturing floor with industrial machinery and production lines.',
+    src: defenceFactory2,
+    alt: 'Defence industrial floor with munitions and heavy manufacturing lines.',
   },
   defenceAviation: {
-    src: defenceAviation,
-    alt: 'Military fast jets on a flight line at sunset.',
+    src: roboticsFactory3,
+    alt: 'Advanced robotics inside a mission-critical manufacturing plant.',
   },
   industrialRdLab: {
-    src: industrialRdLab,
-    alt: 'Engineers working with industrial equipment in a technical environment.',
+    src: heavyFactory4,
+    alt: 'Large-scale defence fabrication and heavy industrial machinery.',
   },
   heavyIndustrialProduction: {
-    src: heavyIndustrialProduction,
-    alt: 'Large-scale industrial plant with piping and heavy production infrastructure.',
+    src: defenceFactory2,
+    alt: 'Defence factory production line for strategic systems and components.',
   },
 } as const;

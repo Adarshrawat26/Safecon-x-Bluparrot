@@ -1,30 +1,27 @@
 import { motion } from 'framer-motion';
 import {
-  ArrowRight,
-  BadgeCheck,
-  BookOpen,
-  BrainCircuit,
-  Cable,
-  ChevronRight,
-  CircuitBoard,
-  ClipboardList,
-  Container,
-  Earth,
-  FileDown,
-  FlaskConical,
-  HardHat,
-  Trophy,
-  Waypoints,
-  type LucideIcon,
+    ArrowRight,
+    BadgeCheck,
+    BookOpen,
+    BrainCircuit,
+    Cable,
+    ChevronRight,
+    CircuitBoard,
+    ClipboardList,
+    Container,
+    Earth,
+    FileDown,
+    FlaskConical,
+    HardHat,
+    Trophy,
+    Waypoints,
+    type LucideIcon,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroMilitary from '../assets/images/hero-military.jpg';
-import internationalGlobe from '../assets/international-operations-globe.png';
+import internationalGlobe from '../assets/images/sections/naval-maritime.jpg';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
-import {
-  Section,
-  SectionLabel,
-} from '../components/ui/DesignSystem';
+import { Section, SectionLabel } from '../components/ui/DesignSystem';
 import { capabilities } from '../data/services';
 import { siteImagery } from '../data/siteImagery';
 
