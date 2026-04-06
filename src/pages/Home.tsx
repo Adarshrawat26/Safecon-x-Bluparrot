@@ -1,24 +1,23 @@
 import { motion } from 'framer-motion';
 import {
-    ArrowRight,
-    BadgeCheck,
-    BookOpen,
-    BrainCircuit,
-    Cable,
-    ChevronRight,
-    CircuitBoard,
-    ClipboardList,
-    Container,
-    Earth,
-    FileDown,
-    FlaskConical,
-    HardHat,
-    Trophy,
-    Waypoints,
-    type LucideIcon,
+  ArrowRight,
+  BadgeCheck,
+  BookOpen,
+  BrainCircuit,
+  Cable,
+  CircuitBoard,
+  ClipboardList,
+  Container,
+  Earth,
+  FileDown,
+  FlaskConical,
+  HardHat,
+  Trophy,
+  Waypoints,
+  type LucideIcon
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroMilitary from '../assets/images/hero-military.jpg';
+import heroDrone from '../assets/images/hero-drone.jpg';
 import internationalGlobe from '../assets/images/sections/naval-maritime.jpg';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
 import { Section, SectionLabel } from '../components/ui/DesignSystem';
@@ -38,6 +37,7 @@ const heroSlashList = [
   '/ AI FOR DEFENCE & INTELLIGENCE',
   '/ MANUFACTURING & SYSTEMS INTEGRATION',
   '/ PROGRAM EXECUTION & SUPPLY CHAIN',
+  '/ INDIGENISATION',
 ];
 
 const HERO_BG_MEDIA_CLASS =
@@ -48,39 +48,20 @@ export const Home = () => {
     <div className="w-full">
       {/* Hero — grid layout, controlled scrim, single dominant CTA */}
       <section className="relative min-h-screen flex flex-col overflow-hidden pt-[72px]">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroMilitary}
-            alt="Military Hero Background"
-            className={HERO_BG_MEDIA_CLASS + ' w-full h-full'}
-          />
-          <div
-            className="absolute inset-0 z-[1]"
-            style={{
-              background:
-                'linear-gradient(to right, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.2) 100%)',
-            }}
-          />
-          <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black/35 via-transparent to-black/25 pointer-events-none" />
-        </div>
+        <div
+          className="absolute inset-0 z-0 w-full h-full"
+          style={{
+            backgroundImage: `url(${heroDrone})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
 
         <div className="relative z-10 flex flex-col flex-1 min-h-[calc(100vh-72px)] max-w-[1600px] mx-auto w-full px-6 sm:px-10 lg:px-12 py-8 md:py-10">
-          {/* Top band: services list + mission */}
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-12 shrink-0">
-            <motion.ul
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] text-white/75 uppercase space-y-2"
-            >
-              {heroSlashList.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </motion.ul>
-      
-          </div>
+          {/* Top band removed, heroSlashList will be shown next to hero section */}
 
-          {/* Main hero: headline + integrated info card */}
+          {/* Main hero: headline + heroSlashList */}
           <div className="flex-1 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-10 items-center min-h-0 py-10 md:py-12 lg:py-8">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -90,19 +71,16 @@ export const Home = () => {
             >
               <div className="inline-flex items-center px-3 py-1.5 rounded-[var(--radius-sm)] bg-white/[0.08] backdrop-blur-md border border-white/10 mb-6 md:mb-8">
                 <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.25em] text-text-secondary uppercase">
-                  25+ years · AI · engineering · execution
+                  AI · ENGINEERING · DEFENCE
                 </span>
               </div>
               <h1 className="font-headline font-bold text-white text-[clamp(1.25rem,4vw+0.3rem,2.5rem)] leading-[1.05] tracking-[-0.0625rem]">
-              Integrated Defence Capabilities Powered by AI, Engineering & Execution
-
+                Integrated Defence Capabilities Powered by AI, Engineering & Execution
                 <br />
-            
               </h1>
               <p className="mt-6 max-w-3xl text-sm md:text-base text-text-secondary leading-relaxed font-light">
-               Safecon Blu Parrot is a group of companies working over 25 years delivering advanced capabilities across Manufacturing in S&T, AI, integration, and project management for aerospace & defence industries.
-From Integration , Manufacturing, SCA 2.2.2 programs to AI-driven intelligence systems, we combine deep engineering with next-generation analytics to build mission-ready solutions, Project Management, Missiles Explosives.
-
+                Safecon Blu Parrot is a group of companies working over 25 years delivering advanced capabilities across Manufacturing in S&T, AI, integration, and project management for aerospace & defence industries.
+                From Integration , Manufacturing, SCA 2.2.2 programs to AI-driven intelligence systems, we combine deep engineering with next-generation analytics to build mission-ready solutions, Project Management, Missiles Explosives.
               </p>
               <div className="flex flex-wrap gap-3 mt-8 md:mt-10">
                 <Link to="/services">
@@ -126,42 +104,16 @@ From Integration , Manufacturing, SCA 2.2.2 programs to AI-driven intelligence s
                 </Link>
               </div>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
+            <motion.ul
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="w-full max-w-md lg:max-w-none justify-self-stretch"
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] text-white/75 uppercase space-y-2 lg:justify-self-end lg:items-end lg:text-right lg:mr-8"
             >
-              <div
-                className="p-5 rounded-[var(--radius)] ring-1 ring-white/10 backdrop-blur-[10px]"
-                style={{ background: 'var(--bg-glass)' }}
-              >
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-[var(--radius-sm)] bg-gradient-to-br from-primary/35 to-tertiary/25 flex items-center justify-center shrink-0 ring-1 ring-white/10">
-                    <span className="font-headline font-bold text-white text-[10px] tracking-tight">SBP</span>
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-headline font-bold text-white text-sm">Integrated Defence Capabilities</p>
-                    <p className="text-[10px] font-sans tracking-[0.2em] text-text-secondary/80 uppercase mt-1">
-                      Safecon Blu Parrot
-                    </p>
-                  </div>
-                </div>
-                <p className="text-xs text-text-secondary mt-4 leading-[1.6]">
-                  Safecon Blu Parrot is a group of companies working over 25 years delivering advanced capabilities
-                  across manufacturing in S&amp;T, AI, integration, and project management for aerospace &amp; defence
-                  industries.
-                </p>
-                <Link
-                  to="/contact"
-                  className="mt-5 flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-[var(--radius-sm)] bg-white/10 border border-white/15 text-white font-headline font-semibold text-xs uppercase tracking-widest hover:bg-white/[0.14] hover:border-white/25 transition-all duration-200"
-                >
-                  Request briefing
-                  <ChevronRight size={16} strokeWidth={2.5} />
-                </Link>
-              </div>
-            </motion.div>
+              {heroSlashList.map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </motion.ul>
           </div>
         </div>
       </section>

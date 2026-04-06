@@ -38,15 +38,15 @@ export const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-background/85 backdrop-blur-xl border-b border-outline-variant/15 shadow-lg shadow-black/30'
-          : 'bg-background/55 backdrop-blur-md'
+          ? 'bg-[#181c20]/85 backdrop-blur-xl border-b border-outline-variant/15 shadow-lg shadow-black/30'
+          : 'bg-[#181c20]/55 backdrop-blur-md'
       }`}
     >
       <div className="h-[72px] flex justify-between items-center px-6 sm:px-10 lg:px-12 max-w-none mx-auto">
         <MotionLink
           to="/"
           onClick={() => setMobileMenuOpen(false)}
-          className="flex h-11 items-center rounded-[var(--radius-sm)] px-3 py-1.5 shrink-0 min-w-0 max-w-[min(100%,560px)]"
+          className="flex h-11 items-center rounded-[var(--radius-sm)] shrink-0 min-w-0 max-w-[min(100%,560px)]"
           aria-label="Safecon Blu Parrot — Home"
           whileHover={reduceMotion ? undefined : { scale: 1.005 }}
           whileTap={reduceMotion ? undefined : { scale: 0.995 }}

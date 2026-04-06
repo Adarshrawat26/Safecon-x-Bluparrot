@@ -60,13 +60,13 @@ export const Footer = () => {
             >
               <Link
                 to="/"
-                className="inline-block rounded-[var(--radius-sm)] bg-white px-3 py-2.5 shadow-md shadow-black/10 ring-1 ring-black/[0.06] hover:ring-black/10 transition-shadow duration-300"
+                className="flex h-11 items-center rounded-[var(--radius-sm)] shrink-0 min-w-0 max-w-[min(100%,560px)]"
                 aria-label="Safecon Blu Parrot — Home"
               >
-                <span className="flex flex-col sm:flex-row items-center sm:items-center gap-3 sm:gap-4">
-                  <SafeconLogo className="h-7 w-auto max-w-[140px]" />
-                  <span className="hidden sm:block h-8 w-px bg-neutral-200 shrink-0" aria-hidden />
-                  <BluParrotLogo className="max-h-8 w-auto max-w-[min(85vw,280px)] sm:max-w-[300px]" />
+                <span className="flex items-center gap-2.5 sm:gap-4">
+                  <SafeconLogo className="h-7 sm:h-8 w-auto max-w-[100px] sm:max-w-[140px] shrink-0" />
+                  <span className="h-7 sm:h-8 w-px bg-white/20 shrink-0" aria-hidden />
+                  <BluParrotLogo className="max-h-7 sm:max-h-8 w-auto max-w-[min(48vw,260px)] sm:max-w-[300px] shrink-0" />
                 </span>
               </Link>
             </motion.div>
