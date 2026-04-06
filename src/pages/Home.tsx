@@ -1,20 +1,20 @@
 import { motion } from 'framer-motion';
 import {
-  ArrowRight,
-  BadgeCheck,
-  BookOpen,
-  BrainCircuit,
-  Cable,
-  CircuitBoard,
-  ClipboardList,
-  Container,
-  Earth,
-  FileDown,
-  FlaskConical,
-  HardHat,
-  Trophy,
-  Waypoints,
-  type LucideIcon
+    ArrowRight,
+    BadgeCheck,
+    BookOpen,
+    BrainCircuit,
+    Cable,
+    CircuitBoard,
+    ClipboardList,
+    Container,
+    Earth,
+    FileDown,
+    FlaskConical,
+    HardHat,
+    Trophy,
+    Waypoints,
+    type LucideIcon
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroDrone from '../assets/images/hero-drone.jpg';
@@ -40,8 +40,6 @@ const heroSlashList = [
   '/ INDIGENISATION',
 ];
 
-const HERO_BG_MEDIA_CLASS =
-  'object-cover object-[58%_20%] sm:object-[54%_18%] scale-[1.42] sm:scale-[1.52] brightness-[0.6] contrast-[1.1]';
 
 export const Home = () => {
   return (
