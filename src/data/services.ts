@@ -62,6 +62,23 @@ export const capabilities: Capability[] = [
     ]
   },
   {
+    id: 'interior-design',
+    title: 'Interior Design & Infrastructure Development',
+    icon: 'building',
+    description: 'Designing high-performance spaces for industrial & commercial environments',
+    details: [
+      'End-to-end interior design and infrastructure development for showrooms, warehouses, and factories',
+      'Visually impactful, functional, and scalable spaces aligned with modern industrial requirements',
+      'Showroom design: experience-led spaces, product display optimization, digital integration, and premium finishes',
+      'Warehouse design: layout planning, zoning, space utilization, and supply chain integration',
+      'Factory & industrial interiors: workflow-driven layouts, safety-compliant infrastructure, and equipment integration',
+      'Turnkey execution: concept to final delivery, vendor management, civil/electrical/finishing work, and quality control',
+      'Approach: design thinking (aesthetic + brand), engineering mindset (efficiency + functionality), execution excellence (timely delivery + quality)',
+      'Value for: industrial manufacturing units, commercial showrooms, warehousing/logistics hubs, large-scale operational facilities',
+      'Positioning: Designing spaces that perform as powerfully as the business within them.'
+    ]
+  },
+  {
     id: 'support',
     title: 'Onsite & Offshore Support',
     icon: 'hard-hat',

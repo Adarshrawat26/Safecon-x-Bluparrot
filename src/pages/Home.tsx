@@ -1,20 +1,21 @@
 import { motion } from 'framer-motion';
 import {
-    ArrowRight,
-    BadgeCheck,
-    BookOpen,
-    BrainCircuit,
-    Cable,
-    CircuitBoard,
-    ClipboardList,
-    Container,
-    Earth,
-    FileDown,
-    FlaskConical,
-    HardHat,
-    Trophy,
-    Waypoints,
-    type LucideIcon
+  ArrowRight,
+  BadgeCheck,
+  BookOpen,
+  BrainCircuit,
+  Building,
+  Cable,
+  CircuitBoard,
+  ClipboardList,
+  Container,
+  Earth,
+  FileDown,
+  FlaskConical,
+  HardHat,
+  Trophy,
+  Waypoints,
+  type LucideIcon
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroDrone from '../assets/images/hero-drone.jpg';
@@ -31,6 +32,7 @@ const iconMap: Record<string, LucideIcon> = {
   waypoints: Waypoints,
   'hard-hat': HardHat,
   'book-open': BookOpen,
+  building: Building,
 };
 
 const heroSlashList = [

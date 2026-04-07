@@ -1,6 +1,7 @@
 import armyFactory1 from '../assets/images/sections/army-factory-1.png';
 import defenceFactory2 from '../assets/images/sections/defence-factory-2.png';
 import heavyFactory4 from '../assets/images/sections/heavy-factory-4.png';
+import interiorDesignInfrastructure from '../assets/images/sections/interior-design-infrastructure.jpg';
 import roboticsFactory3 from '../assets/images/sections/robotics-factory-3.png';
 
 /** Licensed stock (Unsplash) — swap for your own programme photography when cleared for web use. */
@@ -24,5 +25,9 @@ export const siteImagery = {
   heavyIndustrialProduction: {
     src: defenceFactory2,
     alt: 'Defence factory production line for strategic systems and components.',
+  },
+  interiorDesignInfrastructure: {
+    src: interiorDesignInfrastructure,
+    alt: 'Modern infrastructure and architectural facade representing premium interior and infrastructure development.',
   },
 } as const;

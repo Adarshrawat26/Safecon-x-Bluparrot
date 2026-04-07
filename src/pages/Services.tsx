@@ -126,6 +126,87 @@ export const Services = () => {
               </div>
             </div>
           </AnimatedSection>
+
+          {/* Interior Design & Infrastructure Development */}
+          <AnimatedSection delay={0.08} className="md:col-span-12 h-full min-h-0">
+            <TonalCard className="h-full bg-surface-container-high">
+              <div className="flex justify-between items-start mb-12">
+                <div>
+                  <svg width="36" height="36" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" className="text-primary mb-4"><path d="M3 21V5.6a1 1 0 0 1 .553-.894l7-3.5a1 1 0 0 1 .894 0l7 3.5A1 1 0 0 1 21 5.6V21M3 21h18M3 21v-2.4a1 1 0 0 1 .553-.894l7-3.5a1 1 0 0 1 .894 0l7 3.5A1 1 0 0 1 21 18.6V21"/><path d="M7 10v4m5-4v4m5-4v4"/></svg>
+                  <h2 className="font-headline text-3xl font-bold tracking-tight uppercase text-on-background">Interior Design & Infrastructure Development</h2>
+                </div>
+                <span className="text-[10px] font-bold text-outline uppercase tracking-widest mt-2">ID01_ENVIRONMENTS</span>
+              </div>
+              <div className="space-y-6">
+                <p className="text-on-surface-variant text-base leading-relaxed mb-4">
+                  <strong>Safecon Blu Parrot</strong> offers end-to-end interior design and infrastructure development services for showrooms, warehouses, and factory environments, combining aesthetic excellence with operational efficiency. We design spaces that are visually impactful, functional, scalable, and aligned with modern industrial requirements.
+                </p>
+                <div className="relative overflow-hidden rounded-2xl border border-outline-variant/40 bg-surface-container-low">
+                  <img
+                    src={siteImagery.interiorDesignInfrastructure.src}
+                    alt={siteImagery.interiorDesignInfrastructure.alt}
+                    className="h-[260px] w-full object-cover object-center"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="font-headline text-lg font-bold mb-2 text-on-background">Showroom Design (Experience-Led Spaces)</h3>
+                    <ul className="list-disc pl-5 text-on-surface-variant space-y-2 text-sm">
+                      <li>Premium showroom interiors for engineering, manufacturing, industrial, and consumer brands</li>
+                      <li>Product display optimization and customer journey design</li>
+                      <li>Integration of digital screens, interactive zones, and branding elements</li>
+                      <li>High-end finishes aligned with global brand standards</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-headline text-lg font-bold mb-2 text-on-background">Warehouse Design (Efficiency & Flow)</h3>
+                    <ul className="list-disc pl-5 text-on-surface-variant space-y-2 text-sm">
+                      <li>Layout planning for optimized storage and movement</li>
+                      <li>Zoning for inventory, dispatch, and logistics</li>
+                      <li>Space utilization for maximum operational efficiency</li>
+                      <li>Integration with supply chain and workflow systems</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-headline text-lg font-bold mb-2 text-on-background">Factory & Industrial Interiors</h3>
+                    <ul className="list-disc pl-5 text-on-surface-variant space-y-2 text-sm">
+                      <li>Functional design for manufacturing units and assembly lines</li>
+                      <li>Workflow-driven layouts to improve productivity</li>
+                      <li>Safety-compliant infrastructure design</li>
+                      <li>Integration with engineering systems and equipment setup</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-headline text-lg font-bold mb-2 text-on-background">Turnkey Execution</h3>
+                    <ul className="list-disc pl-5 text-on-surface-variant space-y-2 text-sm">
+                      <li>Concept design to final execution</li>
+                      <li>Vendor management and procurement</li>
+                      <li>Civil, electrical, and finishing work</li>
+                      <li>Project timelines and quality control</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-headline text-lg font-bold mb-2 text-on-background">Our Approach</h3>
+                    <ul className="list-disc pl-5 text-on-surface-variant space-y-2 text-sm">
+                      <li><strong>Design Thinking</strong> → Aesthetic + Brand Alignment</li>
+                      <li><strong>Engineering Mindset</strong> → Efficiency + Functionality</li>
+                      <li><strong>Execution Excellence</strong> → Timely Delivery + Quality</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-headline text-lg font-bold mb-2 text-on-background">Where We Add Value</h3>
+                    <ul className="list-disc pl-5 text-on-surface-variant space-y-2 text-sm">
+                      <li>Industrial manufacturing units</li>
+                      <li>Commercial showrooms & experience centres</li>
+                      <li>Warehousing & logistics hubs</li>
+                      <li>Large-scale operational facilities</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </TonalCard>
+          </AnimatedSection>
         </div>
       </Section>
 
